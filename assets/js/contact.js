@@ -74,11 +74,11 @@ class Contact {
       localStorage.setItem('contacts', JSON.stringify(contacts));
     }
   
-    static removeContact(subject) {
+    static removeContact(messageA) {
       const contacts = Store.getContacts();
   
       contacts.forEach((contact, index) => {
-        if(contact.subject === subject) {
+        if(contact.messageA === messageA) {
           contacts.splice(index, 1);
         }
       });
